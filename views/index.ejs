@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <h1 class="time"><%= day[currDay]%>,<%= currDate %></h1>
+    <form action="/" method="post">
+        <input type="text" id="cityInput" name="cityName" placeholder="Los Angeles">
+        <button class="submitButton" type="submit">Go</button>
+    </form>
+
+    <% if (typeof temp !== 'undefined') { %>
+        <div class="weather-container">
+            <div class="leftPart">
+                <img src="<%= iconImage %>" class="weatherImg">
+            </div>
+            
+            <div class="rightPart">
+                <h1 class="temp">🌡️<%= temp %> ℃</h1>
+                <p class="discription">☁️<%= dis %></p>
+                <p class="cityName">📍<%= cityName %></p>
+                <p class="humidity">💧 Humidity: <%= humidity %>%</p>
+                <p class="WindSpeed">💨 Wind Speed: <%= wind %> m/s</p>
+
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>

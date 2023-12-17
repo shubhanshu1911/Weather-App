@@ -1,0 +1,131 @@
+* {
+    background-color: #6499E9;
+}
+.time{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 0;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+}
+ /* The typing effect */
+ @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+form {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    text-align: center;
+}
+.submitButton {
+    background-color: #ffffff; 
+    color: #3498db; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+}
+
+.submitButton:hover {
+    background-color: #3498db; 
+    color: #ffffff; 
+}
+
+#cityInput {
+    border-radius: 20px; 
+    height: 30px;
+    background-color: white;
+    padding: 4px 10px; 
+    border: 1px solid #ccc; 
+    font-size: 16px; 
+    width: 300px; 
+}
+
+
+/* OUTPUT CSS */
+/* Add these styles to your CSS */
+.weather-container {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 550px;
+}
+
+.leftPart {
+    flex: 1; 
+    padding: 10px; 
+    margin-right: 50px;
+}
+
+.weatherImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.weatherImg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)); /* Add a gradient overlay */
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add a smooth transition for overlay */
+}
+
+.weatherImg:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+
+
+.rightPart {
+    flex: 1; 
+    padding: 10px; 
+    margin-left: 50px;
+}
+
+.temp {
+    font-size: 40px; 
+}
+
+.cityName {
+    font-size: 30px; 
+    text-align: center;
+}
+.discription{
+    font-size: 20px; 
+    text-align: center;
+}
+.humidity {
+    font-size: 25px;
+    text-align: center; 
+}
+
+.WindSpeed {
+    font-size: 25px;
+    text-align: center; 
+}
+
